@@ -1,0 +1,2 @@
+export const googleMapUrl = `https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=geometry,drawing,places&key=AIzaSyBC3Hg7WYIe8-ERm-MNHf0rmageaZadZ8c`
+export const googleMapIconImage = 'https://www.iconninja.com/files/942/375/805/avatar-face-icon.png'
