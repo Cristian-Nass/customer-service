@@ -8,7 +8,7 @@ import { Loading } from './Loading';
 const User: React.FC<UserProps> = (): JSX.Element => {
   const dispatch = useDispatch();
   const { users, loading } = useSelector((state: {usersReducer: UserState}) => state.usersReducer);
-  const [sortAscending, setSortAscending] = useState(false);
+  const [sortAscending, setSortAscending] = useState(true);
 
   useEffect(() => {
     dispatch(getUsers())
