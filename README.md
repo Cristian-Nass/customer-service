@@ -6,6 +6,12 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 In the project directory, you can run:
 
+### `work with google map`
+Clone or copy this files go to program folder , use npm install for install all dependencies.
+You need a .env file in root folder and put the google key there (i put a .env.example for example)
+or you can this key for test:
+REACT_APP_GOOGLE_KEY=AIzaSyBC3Hg7WYIe8-ERm-MNHf0rmageaZadZ8c
+
 ### `npm start`
 
 Runs the app in the development mode.\
@@ -14,8 +20,6 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 The page will reload if you make edits.\
 You will also see any lint errors in the console.
 
-### `work with google map`
-You need an .env fire in root folder and put the google key there (i put a .env.example for eaxple)
 
 ### `npm test`
 
