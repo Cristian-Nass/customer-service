@@ -14,6 +14,9 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 The page will reload if you make edits.\
 You will also see any lint errors in the console.
 
+### `work with google map`
+You need an .env fire in root folder and put the google key there (i put a .env.example for eaxple)
+
 ### `npm test`
 
 Launches the test runner in the interactive watch mode.\
