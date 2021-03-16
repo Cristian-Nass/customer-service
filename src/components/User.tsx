@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect,useState } from 'react';
 import { useDispatch, useSelector } from "react-redux";
 import { UserProps, UserState } from '../models/user';
 import { getUsers } from '../store/slices/user/user.action';
@@ -8,26 +8,31 @@ import { Loading } from './Loading';
 const User: React.FC<UserProps> = (): JSX.Element => {
   const dispatch = useDispatch();
   const { users, loading } = useSelector((state: {usersReducer: UserState}) => state.usersReducer);
-  
+  const [sortAscending, setSortAscending] = useState(true);
+
   useEffect(() => {
     dispatch(getUsers())
   }, [dispatch]);
   
-  const handleSortering = (key: string) => dispatch(sortBy(key));
+  const handleSortering = (key: string, sortAscending: boolean) => {
+    setSortAscending(!sortAscending);
+    dispatch(sortBy({key, sortAscending}));
+  };
 
   if (loading) return <Loading />
   return (
     <>
       <table>
         <thead>
-          <tr>
+        <tr>
             <th 
-              onClick={() => handleSortering('id')}><span className="cursor-arrow" >ID 	&darr;</span></th>
+              className="cursor-arrow" onClick={() => handleSortering('id', sortAscending)}>ID 	&darr;&uarr;</th>
             <th 
-              onClick={() => handleSortering('name')}><span className="cursor-arrow" >Name 	&darr;</span></th>
+              className="cursor-arrow" onClick={() => handleSortering('name', sortAscending)}>Name 	&darr;&uarr;</th>
             <th 
-              onClick={() => handleSortering('username')}><span className="cursor-arrow" >Username 	&darr;</span></th>
-            <th>Email</th>
+              className="cursor-arrow" onClick={() => handleSortering('username', sortAscending)}>Username 	&darr;&uarr;</th>
+            <th
+              className="cursor-arrow" onClick={() => handleSortering('username', sortAscending)}>Email   &darr;&uarr;</th>
             <th>Phone</th>
           </tr>
         </thead>

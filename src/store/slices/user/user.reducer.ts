@@ -6,6 +6,11 @@ export const userInitialState: UserState = {
   loading: true
 };
 
+type payload = {
+  key: string;
+  sortAscending: boolean;
+};
+
 const userSlice = createSlice({
   name: 'users',
   initialState: userInitialState,
@@ -14,8 +19,13 @@ const userSlice = createSlice({
       state.users = payload;
       state.loading = false;
     },
-    sortBy: (state, {payload}: PayloadAction<string>) => {
-      state.users.sort((a: any, b: any) => typeof(a[payload]) === 'number' ? (a[payload] - b[payload]) : a[payload].localeCompare(b[payload]));
+    sortBy: (state, {payload}: PayloadAction<payload>) => {
+      if (payload.sortAscending) {
+        state.users.sort((a: any, b: any) => typeof(a[payload.key]) === 'number' ? (a[payload.key] - b[payload.key]) : a[payload.key].localeCompare(b[payload.key]));
+      } else {
+        state.users.sort((a: any, b: any) => typeof(a[payload.key]) === 'number' ? (b[payload.key] - a[payload.key]) : b[payload.key].localeCompare([payload.key]));
+      }
+      console.log('TEST TEXT: ', payload.sortAscending);
     }
   },
 });
