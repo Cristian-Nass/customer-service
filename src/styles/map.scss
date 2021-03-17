@@ -1,0 +1,12 @@
+.map {
+  width: 100vw;
+  // negative margin for give full width at mobile devices
+  margin-left: -$default-padding;
+  height: calc(100vh - #{$navbar-height});
+
+  @include respond-to(tablet, desktop) {
+    width: 100%;
+    margin-left: unset;
+    max-height: 600px;
+  }
+}

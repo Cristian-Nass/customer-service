@@ -21,20 +21,20 @@ const User: React.FC<UserProps> = (): JSX.Element => {
 
   if (loading) return <Loading />
   return (
-    <>
-      <table>
-        <thead>
-        <tr>
-            <th className="cursor-arrow" onClick={() => handleSortering('id', sortAscending)}>ID &darr;&uarr;</th>
-            <th className="cursor-arrow" onClick={() => handleSortering('name', sortAscending)}>Name &darr;&uarr;</th>
-            <th className="cursor-arrow" onClick={() => handleSortering('username', sortAscending)}>Username &darr;&uarr;</th>
-            <th className="cursor-arrow" onClick={() => handleSortering('username', sortAscending)}>Email &darr;&uarr;</th>
-            <th className="cursor-arrow" onClick={() => handleSortering('username', sortAscending)}>Phone &darr;&uarr;</th>
+    <div className='users'>
+      <table className='users__table'>
+        <thead className='users__table-head'>
+          <tr className='users__table-head-row'>
+            <th className='users__table-head-row-title' onClick={() => handleSortering('id', sortAscending)}>ID &darr;&uarr;</th>
+            <th className='users__table-head-row-title' onClick={() => handleSortering('name', sortAscending)}>Name &darr;&uarr;</th>
+            <th className='users__table-head-row-title' onClick={() => handleSortering('username', sortAscending)}>Username &darr;&uarr;</th>
+            <th className='users__table-head-row-title' onClick={() => handleSortering('username', sortAscending)}>Email &darr;&uarr;</th>
+            <th className='users__table-head-row-title' onClick={() => handleSortering('username', sortAscending)}>Phone &darr;&uarr;</th>
           </tr>
         </thead>
-        <tbody>
+        <tbody className='users__table-body'>
           {users.length && users.map((user: any) => (
-            <tr key={user.id}>
+            <tr key={user.id} className='users__table-body-row'>
               <th>{user.id}</th>
               <td>{user.name}</td>
               <td>{user.username}</td>
@@ -44,7 +44,7 @@ const User: React.FC<UserProps> = (): JSX.Element => {
           ))}
         </tbody>
       </table>
-    </>
+    </div>
   );
 }
 

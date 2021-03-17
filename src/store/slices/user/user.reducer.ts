@@ -1,5 +1,5 @@
 import { UserState, UserModel } from '../../../models/user';
-import { createEntityAdapter, createSlice, PayloadAction } from '@reduxjs/toolkit'
+import { createSlice, PayloadAction } from '@reduxjs/toolkit'
 
 export const userInitialState: UserState = {
   users: [],

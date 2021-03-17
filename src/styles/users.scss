@@ -1,0 +1,28 @@
+.users {
+  overflow: auto;
+  padding-bottom: $default-padding/3;
+  
+  &__table {
+    width: 100%;
+  }
+
+  &__table-head {
+    background-color: $color-black;
+    color: $color-white;
+  }
+
+  &__table-head-row-title {
+    cursor: pointer;
+    &:hover {
+      background-color: lighten($color-black, 20);
+    }
+  }
+
+  &__table-body-row {
+    height: 30px;
+    
+    &:nth-child(2n+2) {
+      background-color: $color-light-grey;
+    }
+  }
+}

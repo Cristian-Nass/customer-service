@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Heebo&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
+@import './styles/variables.scss';
+@import './styles/mixins.scss';
+@import './styles/home.scss';
+@import './styles/navbar.scss';
+@import './styles/users.scss';
+@import './styles/map.scss';
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background-color: $color-light-blue;
+  font-family: 'Noto Sans', sans-serif;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+ul {
+  margin: 0;
+}
+
+#root {
+  overflow-x: hidden;
+}
+
+.app {
+  width: 100vw;
+  min-height: 97vh;
+  padding: $default-padding;
+  padding-top: 0;
+  background-color: $color-white;
+  @include respond-to(tablet, desktop) {
+    width: 80vw;
+    margin: 0 auto;
+  }
+}
+
+/* Spinner */
+#loading {
+  position: absolute;
+  left: 49%;
+  top: 200px;
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  background-color: transparent;
+  border: 5px solid #93dac4;
+  border-radius: 50%;
+  border-top-color: #25614f;
+  -webkit-animation:spin 1.5s linear infinite;
+  -moz-animation:spin 1.5s linear infinite;
+  animation:spin 1.5s linear infinite;
+}
+
+@-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
+@-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
+@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
