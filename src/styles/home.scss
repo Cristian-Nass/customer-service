@@ -7,8 +7,9 @@
   margin: 0 auto;
 
   &__title {
-    text-decoration: underline;
+    text-decoration: none;
     font-size: $defult-mobile-title;
+    color: $color-black;
     @include respond-to(tablet, desktop) {
       font-size: $defult-desktop-title;
     }

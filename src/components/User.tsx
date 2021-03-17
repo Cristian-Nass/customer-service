@@ -22,19 +22,19 @@ const User: React.FC<UserProps> = (): JSX.Element => {
   if (loading) return <Loading />
   return (
     <div className='users'>
-      <table className='users-table'>
-        <thead className='users-table__head'>
-          <tr>
-            <th className="cursor-arrow" onClick={() => handleSortering('id', sortAscending)}>ID &darr;&uarr;</th>
-            <th className="cursor-arrow" onClick={() => handleSortering('name', sortAscending)}>Name &darr;&uarr;</th>
-            <th className="cursor-arrow" onClick={() => handleSortering('username', sortAscending)}>Username &darr;&uarr;</th>
-            <th className="cursor-arrow" onClick={() => handleSortering('username', sortAscending)}>Email &darr;&uarr;</th>
-            <th className="cursor-arrow" onClick={() => handleSortering('username', sortAscending)}>Phone &darr;&uarr;</th>
+      <table className='users__table'>
+        <thead className='users__table-head'>
+          <tr className='users__table-head-row'>
+            <th className='users__table-head-row-title' onClick={() => handleSortering('id', sortAscending)}>ID &darr;&uarr;</th>
+            <th className='users__table-head-row-title' onClick={() => handleSortering('name', sortAscending)}>Name &darr;&uarr;</th>
+            <th className='users__table-head-row-title' onClick={() => handleSortering('username', sortAscending)}>Username &darr;&uarr;</th>
+            <th className='users__table-head-row-title' onClick={() => handleSortering('username', sortAscending)}>Email &darr;&uarr;</th>
+            <th className='users__table-head-row-title' onClick={() => handleSortering('username', sortAscending)}>Phone &darr;&uarr;</th>
           </tr>
         </thead>
-        <tbody className='users-table__body'>
+        <tbody className='users__table-body'>
           {users.length && users.map((user: any) => (
-            <tr key={user.id} className='users-table__body-row'>
+            <tr key={user.id} className='users__table-body-row'>
               <th>{user.id}</th>
               <td>{user.name}</td>
               <td>{user.username}</td>

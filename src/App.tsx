@@ -7,7 +7,7 @@ import MapComponent from './components/Map'
 
 function App() {
   return (
-    <div className="App">
+    <div className="app">
       <BrowserRouter>
         <Navbar />
         <Switch>
