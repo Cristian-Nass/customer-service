@@ -1,0 +1,25 @@
+// These should match config in app.module.ts
+$device-bps: (
+    'mobile': '(max-width: 767px)',
+    'mobile-small': '(max-width: 413px)',
+    'mobile-medium': '(min-width: 414px) and (max-width: 511px)',
+    'mobile-large': '(min-width: 512px) and (max-width: 767px)',
+    'tablet': '(min-width: 768px) and (max-width: 1367px)',
+    'tablet-small': '(min-width: 768px) and (max-width: 859px)',
+    'tablet-medium': '(min-width: 860px) and (max-width: 1111px)',
+    'tablet-large': '(min-width: 1112px) and (max-width: 1367px)',
+    'desktop': '(min-width: 1368px)',
+    'desktop-small': '(min-width: 1368px) and (max-width: 1439px)',
+    'desktop-medium': '(min-width: 1440px) and (max-width: 1519px)',
+    'desktop-large': '(min-width: 1520px)',
+    'desktop-max': '(min-width: 1920px)'
+);
+
+// Use with sizes defined above i.e. @include respond-to(tablet) or @include respond-to(tablet-small, tablet-medium) etc.
+@mixin respond-to($devices...) {
+    @each $device in $devices {
+        @media #{map-get($device-bps, $device)} {
+            @content;
+        }
+    }
+}

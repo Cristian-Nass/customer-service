@@ -1,0 +1,21 @@
+.users {
+  overflow: auto;
+  padding-bottom: $default-padding/3;
+}
+
+.users-table {
+  width: 100%;
+
+  &__head {
+    background-color: $color-black;
+    color: $color-white;
+  }
+
+  &__body {}
+
+  &__body-row {
+    &:nth-child(2n+2) {
+      background-color: $color-light-grey;
+    }
+  }
+}

@@ -55,7 +55,7 @@ const MapComponent = () => {
       isMarkerShown
       googleMapURL={googleMapUrl}
       loadingElement={<div style={{ height: `100%` }} />}
-      containerElement={<div style={{ height: `80vh` }} />}
+      containerElement={<div className='map' />}
       mapElement={<div style={{ height: `100%` }} />}
     />
   )

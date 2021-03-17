@@ -4,7 +4,6 @@ import Navbar from './components/Navbar'
 import Home from './components/Home'
 import User from './components/User'
 import MapComponent from './components/Map'
-import './App.css';
 
 function App() {
   return (

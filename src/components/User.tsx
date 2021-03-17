@@ -21,10 +21,10 @@ const User: React.FC<UserProps> = (): JSX.Element => {
 
   if (loading) return <Loading />
   return (
-    <>
-      <table>
-        <thead>
-        <tr>
+    <div className='users'>
+      <table className='users-table'>
+        <thead className='users-table__head'>
+          <tr>
             <th className="cursor-arrow" onClick={() => handleSortering('id', sortAscending)}>ID &darr;&uarr;</th>
             <th className="cursor-arrow" onClick={() => handleSortering('name', sortAscending)}>Name &darr;&uarr;</th>
             <th className="cursor-arrow" onClick={() => handleSortering('username', sortAscending)}>Username &darr;&uarr;</th>
@@ -32,9 +32,9 @@ const User: React.FC<UserProps> = (): JSX.Element => {
             <th className="cursor-arrow" onClick={() => handleSortering('username', sortAscending)}>Phone &darr;&uarr;</th>
           </tr>
         </thead>
-        <tbody>
+        <tbody className='users-table__body'>
           {users.length && users.map((user: any) => (
-            <tr key={user.id}>
+            <tr key={user.id} className='users-table__body-row'>
               <th>{user.id}</th>
               <td>{user.name}</td>
               <td>{user.username}</td>
@@ -44,7 +44,7 @@ const User: React.FC<UserProps> = (): JSX.Element => {
           ))}
         </tbody>
       </table>
-    </>
+    </div>
   );
 }
 

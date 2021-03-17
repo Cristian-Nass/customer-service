@@ -1,0 +1,19 @@
+.home {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  // Its not working for IE but its just for simlpe change presentation and not effect anyting
+  width: max-content;
+  margin: 0 auto;
+
+  &__title {
+    text-decoration: underline;
+    font-size: $defult-mobile-title;
+    @include respond-to(tablet, desktop) {
+      font-size: $defult-desktop-title;
+    }
+  }
+  &__subtitle {
+    text-align: right;
+  }
+}

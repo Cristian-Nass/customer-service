@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Heebo&display=swap');
+@import './styles/variables.scss';
+@import './styles/mixins.scss';
+@import './styles/home.scss';
+@import './styles/navbar.scss';
+@import './styles/users.scss';
+@import './styles/map.scss';
+
+/* Spinner */
+#loading {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  background-color: transparent;
+  border: 3px solid rgba(255, 177, 177, 0.3);
+  border-radius: 50%;
+  border-top-color: rgb(212, 22, 22);
+  -webkit-animation:spin 1.5s linear infinite;
+  -moz-animation:spin 1.5s linear infinite;
+  animation:spin 1.5s linear infinite;
+}
+
+@-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
+@-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
+@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background-color: $color-light-blue;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+ul {
+  margin: 0;
+}
+
+#root {
+  overflow-x: hidden;
+}
+
+.app {
+  width: 100vw;
+  min-height: 100vh;
+  padding: $default-padding;
+  padding-top: 0;
+  background-color: $color-white;
+  @include respond-to(tablet, desktop) {
+    width: 80vw;
+    margin: 0 auto;
+  }
+}
