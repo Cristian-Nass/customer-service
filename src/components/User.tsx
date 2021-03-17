@@ -25,15 +25,11 @@ const User: React.FC<UserProps> = (): JSX.Element => {
       <table>
         <thead>
         <tr>
-            <th 
-              className="cursor-arrow" onClick={() => handleSortering('id', sortAscending)}>ID 	&darr;&uarr;</th>
-            <th 
-              className="cursor-arrow" onClick={() => handleSortering('name', sortAscending)}>Name 	&darr;&uarr;</th>
-            <th 
-              className="cursor-arrow" onClick={() => handleSortering('username', sortAscending)}>Username 	&darr;&uarr;</th>
-            <th
-              className="cursor-arrow" onClick={() => handleSortering('username', sortAscending)}>Email   &darr;&uarr;</th>
-            <th>Phone</th>
+            <th className="cursor-arrow" onClick={() => handleSortering('id', sortAscending)}>ID &darr;&uarr;</th>
+            <th className="cursor-arrow" onClick={() => handleSortering('name', sortAscending)}>Name &darr;&uarr;</th>
+            <th className="cursor-arrow" onClick={() => handleSortering('username', sortAscending)}>Username &darr;&uarr;</th>
+            <th className="cursor-arrow" onClick={() => handleSortering('username', sortAscending)}>Email &darr;&uarr;</th>
+            <th className="cursor-arrow" onClick={() => handleSortering('username', sortAscending)}>Phone &darr;&uarr;</th>
           </tr>
         </thead>
         <tbody>
