@@ -1,6 +1,6 @@
 import { UserModel } from '../../../models/user';
 import { usersReceived } from './user.reducer';
-import { createAsyncThunk, Dispatch } from '@reduxjs/toolkit'
+import { Dispatch } from '@reduxjs/toolkit'
 import { palceHolderApi } from '../../../api/jsonPlaceHolder'
 
 
