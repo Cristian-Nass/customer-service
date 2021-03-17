@@ -9,9 +9,6 @@ In the project directory, you can run:
 ### `Befor npm start`
 Clone or copy this files go to program folder, 
 Use npm install for install all dependencies.
-You need a .env file in root folder and put the google key there (i put a .env.example for example)
-or you can this key for test:
-REACT_APP_GOOGLE_KEY=AIzaSyBC3Hg7WYIe8-ERm-MNHf0rmageaZadZ8c
 
 ### `npm start`
 
